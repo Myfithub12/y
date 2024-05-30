@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
+    <title>Baseball</title>
+</head>
+<body>
+    <header class="data">
+        <h1>Hitting Data Collection</h1>
+        <div>
+            <img src="/images/al.gif" height="150" width="150" alt="image">
+            <img src="/images/mlb.jpg" height="150" width="150" alt="image">
+            <img src="/images/nl.gif" height="150" width="150" alt="image">
+        </div>
+    </header>
+    <section>
+        <div class="aaa">
+                <div>
+                    <table>
+                        <tr>
+                            <td><a type="button" href="/index.html" class="btn btn-success m-4"><h2>Home Page</h2></a></td>
+                            <td><a type="button" href="/html/Pitching.html" class="btn btn-success m-4"><h2>Pitching</h2></a></td>
+                        </tr>
+                        </table>
+                </div>
+        </div>
+    </section>
+    <section class="aaa">
+        <form id="dataForm"> 
+            <section>
+                <div class="date">
+                <label for="date">Date:</label> 
+                <input type="text" id="date" name="date" required> 
+            </div>
+            <div class="name">
+            <label for="name">Name:</label> 
+            <input type="text" id="name" name="name" required> 
+        </div>
+        <div class="team">
+            <label for="team">Team:</label> 
+            <input type="team" id="team" name="team" required>
+        </div>
+        <div class="position"> 
+            <label for="position">Position:</label> 
+            <input type="position" id="position" name="position" required> 
+        </div>
+        <div class="atbat">
+            <label for="atbat">At Bat:</label> 
+            <input type="atbat" id="atbat" name="atbat" required> 
+        </div>
+        <div class="hitOut">
+            <label for="hitOrOut">Pick:</label> 
+            <select id="hitOrOut" name="hitOrOut" required>
+                <option value="">Select an option</option>
+                <option value="hit">Hit</option>
+                <option value="strike">Strike</option>
+                <option value="walk">Walk</option>
+                <option value="flyout">Fly Out</option>
+                <option value="groundout">Ground Out</option>
+                <option value="thrownout">Thrown Out</option>
+            </select>
+        </div>
+        <div class="submit">
+            <button type="submit">Submit</button> 
+        </div>
+        </form> 
+    </section>
+    <footer>
+        <section>
+        <div>
+            <p>&copy; &trade; 2024 A Mark Hollrah Production</p>
+        </div>
+        </section>
+    </footer>
+    <script src="/script/index.js"></script>
+</body>
+</html>

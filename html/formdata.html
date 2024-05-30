@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Data</title>
+</head>
+<body>
+
+<form id="dataForm">
+    <section>
+        <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="team">
+            <label for="team">Team:</label>
+            <input type="text" id="team" name="team" required>
+        </div>
+        <div class="position">
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+        </div>
+        <div class="atbat">
+            <label for="atbat">At Bat:</label>
+            <input type="text" id="atbat" name="atbat" required>
+        </div>
+        <div class="hitOut">
+            <label for="hitOrOut">Pick:</label>
+            <select id="hitOrOut" name="hitOrOut" required>
+                <option value="">Select an option</option>
+                <option value="hit">Hit</option>
+                <option value="strike">Strike</option>
+                <option value="walk">Walk</option>
+                <option value="flyout">Fly Out</option>
+                <option value="groundout">Ground Out</option>
+                <option value="thrownout">Thrown Out</option>
+            </select>
+        </div>
+        <div class="submit">
+            <button type="button" onclick="saveFormData()">Submit</button>
+        </div>
+    </section>
+</form>
+
+<script>
+function saveFormData() {
+    const formData = {
+        name: document.getElementById('name').value,
+        team: document.getElementById('team').value,
+        position: document.getElementById('position').value,
+        atbat: document.getElementById('atbat').value,
+        hitOrOut: document.getElementById('hitOrOut').value
+    };
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+    alert('Form data has been saved successfully.');
+}
+
+// Load the saved form data if it exists
+window.onload = function() {
+    const savedFormData = localStorage.getItem('formData');
+    if (savedFormData) {
+        const formData = JSON.parse(savedFormData);
+        document.getElementById('name').value = formData.name;
+        document.getElementById('team').value = formData.team;
+        document.getElementById('position').value = formData.position;
+        document.getElementById('atbat').value = formData.atbat;
+        document.getElementById('hitOrOut').value = formData.hitOrOut;
+    }
+};
+</script>
+
+</body>
+</html>

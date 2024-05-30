@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
+    <title>Baseball</title>
+</head>
+<body>
+    <header class="data">
+        <h1>Pitching Data Collection</h1>
+        <div>
+            <img src="/images/al.gif" height="150" width="150" alt="image">
+            <img src="/images/mlb.jpg" height="150" width="150" alt="image">
+            <img src="/images/nl.gif" height="150" width="150" alt="image">
+        </div>
+    </header>
+    <section>
+        <form id="dataForm"> 
+            <section>
+            <div class="name">
+            <label for="name">Name:</label> 
+            <input type="text" id="name" name="name" required> 
+        </div>
+        <div class="team">
+            <label for="team">Team:</label> 
+            <input type="team" id="team" name="team" required>
+        </div>
+        <div class="hits"> 
+            <label for="hits">Hits:</label> 
+            <input type="hits" id="hits" name="hits" required> 
+        </div>
+        <div class="balls">
+            <label for="balls">Balls:</label> 
+            <input type="balls" id="balls" name="balls" required> 
+        </div>
+        <div class="innings">
+            <label for="inningsPitched">Innings Pitched:</label> 
+            <input type="inningsPitched" id="inningsPitched" name="inningsPitched" required> 
+        </div>
+        <div class="submit">
+            <button type="submit">Submit</button> 
+        </div>
+        </form> 
+    </section>
+    <section>
+        <div class="aaa">
+                <div>
+                    <table>
+                        <tr>
+                            <td><a type="button" href="/html/batting.html" class="btn btn-success m-4"><h2>Hitting</h2></a></td>
+                            <td><a type="button" href="/index.html" class="btn btn-success m-4"><h2>Home Page</h2></a></td>
+                        </tr>
+                        </table>
+                </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p>&copy; &trade; 2024 A Mark Hollrah Production</p>
+        </div>
+    </footer>
+</body>
+<script src="/script/pitching.js"></script>
+</html>
